@@ -1,0 +1,138 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    background:rgba(255,255,255,0.95);
+    padding:36px 40px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(0,0,0,0.3);
+    width:90%;
+    max-width:550px;
+}
+
+.icon{
+    font-size:44px;
+    margin-bottom:12px;
+}
+
+h1{
+    color:#333;
+    margin-bottom:8px;
+}
+
+p{
+    color:#666;
+    margin-bottom:20px;
+}
+
+.time-inputs{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.time-inputs input{
+    width:90px;
+    padding:12px;
+    border:2px solid #667eea;
+    border-radius:12px;
+    text-align:center;
+    font-size:16px;
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.2em;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(
+        0.175, 0.885, 0.32, 1.275
+    );
+    box-shadow: 0 8px 20px rgba(
+        102, 126, 234, 0.3
+    );
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );
+    transition: left 0.6s;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(
+        102, 126, 234, 0.4
+    );
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 25px rgba(102,126,234,0.4);
+}
+
+.countdown-box{
+    margin-top:30px;
+}
+
+.countdown-number{
+    font-size:48px;
+    font-weight:bold;
+    color:#667eea;
+}
+
+.countdown-text{
+    color:#999;
+    margin-top:5px;
+}
+.fake-alert {
+    background-color: rgb(18, 15, 15);
+    color: red;
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    border: 2px solid red;
+    box-shadow: 0 0 25px #ff3333;
+    padding:10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transform: scale(0.1);
+    opacity: 0;
+    transition: all 0.5s;
+}

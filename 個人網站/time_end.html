@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>時間到</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+    <link rel="stylesheet" href="css/html.css">
+</head>
+<body>
+    <div class="container">
+        <div class="icon">⏰</div>
+        <h1>時間到！</h1>
+        <p>遊戲結束，請重新開始。</p>
+        <button onclick="HackerAttack()">繼續玩</button>
+        <br>
+        <br>
+        <button id="restartBtn" onclick="window.location.href='index.html'">重新開始</button>
+    </div>
+</body>
+<script>
+    function HackerAttack() {
+
+        let sound = new Audio("sound.wav");
+        sound.play();
+
+        var n = 100;
+        for (var i = 1; i <= n; i++) {
+            setTimeout(() => {
+                let box = document.createElement("div")
+                box.innerText = "⚠️系統警告⚠️";   
+                document.body.appendChild(box); 
+                box.className = "fake-alert";
+
+                box.offsetWidth; // 觸發重繪，確保動畫能夠重新開始
+
+                box.style.left = (Math.random() * 100) + "%";
+                box.style.top = (Math.random() * 100) + "%";
+                box.style.opacity = "1";
+                box.style.transform = `scale(${Math.random() + 0.5}) rotate(${Math.random() * 60 - 30}deg)`;
+
+
+            }, i * 20)
+        }
+         
+
+
+    }
+</script>
+</html>
